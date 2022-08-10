@@ -1,26 +1,57 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const Father = styled.div`
+const Wrapper = styled.div`
   display: flex;
-`;
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Text = styled.h1`
-  color: white;
+const rotateAnimation = keyframes`
+  0% {
+    transform:rotate(0deg);
+    border-radius:0px;
+  }
+  50% {
+    transform:rotate(360deg);
+    border-radius:100px;
+  }
+
+  100%{
+    transform:rotate(0deg);
+    border-radius:0px;
+  }
+`;
+
+const Emoji = styled.span`
+  font-size: 30px;
+  transition: all ease-in 0.2s;
+`;
+
+const Box = styled.div`
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  animation: ${rotateAnimation} 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${Emoji} {
+    &:hover {
+      font-size: 45px;
+    }
+  }
 `;
 
 function App() {
   return (
-    <Father>
-      <Box bgColor="teal">
-        <Text>HEllo</Text>
+    <Wrapper>
+      <Box>
+        <Emoji>😚</Emoji>
       </Box>
-      <Box bgColor="tomato"></Box>
-    </Father>
+      <Emoji>😚</Emoji>
+    </Wrapper>
   );
 }
 
