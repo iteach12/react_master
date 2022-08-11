@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Wrapper = styled.div`
@@ -6,7 +7,7 @@ const Wrapper = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color:${(props) => props.theme.backgroundColor}
+  background-color: ${(props) => props.theme.backgroundColor};
 `;
 
 const rotateAnimation = keyframes`
@@ -28,7 +29,7 @@ const rotateAnimation = keyframes`
 const Emoji = styled.span`
   font-size: 30px;
   transition: all ease-in 0.2s;
-  color:${(props)=>props.theme.textColor}
+  color: ${(props) => props.theme.textColor};
 `;
 
 const Box = styled.div`
