@@ -1,15 +1,13 @@
 import React from 'react';
 import Circle from './Circle';
 
-
 function App() {
-  return(
+  return (
     <div>
-      <Circle bgColor="teal" />
+      <Circle bgColor="teal" borderColor="tomato" text="HELLO NICO" />
       <Circle bgColor="tomato" />
     </div>
-  )
-  
+  );
 }
 
 export default App;
