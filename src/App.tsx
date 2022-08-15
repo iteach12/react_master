@@ -1,13 +1,8 @@
+import Router from './Router';
 import React from 'react';
-import Circle from './Circle';
 
 function App() {
-  return (
-    <div>
-      <Circle bgColor="teal" borderColor="tomato" text="HELLO NICO" />
-      <Circle bgColor="tomato" />
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;
