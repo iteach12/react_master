@@ -89,7 +89,7 @@ function Coins() {
                 to={{
                   pathname: `/${coin.id}`,
                 }}
-                state={coin.name}
+                state={coin}
               >
                 <Img
                   src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
